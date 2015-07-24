@@ -1,0 +1,24 @@
+
+// Variables for theme
+@import "variables";
+// Theme
+@import "./libs/bootstrap/stylesheets/bootstrap";
+
+// Mixins
+@import "mixins/breakpoints";
+
+// Layout
+@import "layout/boilerplate";
+
+// Components
+@import "components/navbar";
+@import "components/buttons";
+@import "components/loaders";
+
+// Pages
+@import "pages/index";
+@import "pages/article";
+
+
+
+

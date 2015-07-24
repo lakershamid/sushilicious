@@ -1,0 +1,44 @@
+.btn {
+  border: none;
+  @extend .sandstone;
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  &-lg {
+    line-height: 26px;
+  }
+
+  &-default {
+    &:hover {
+      background-color: $navbar-default-link-active-bg;
+    }
+  }
+}
+
+input,
+.form-control {
+  @include box-shadow(none);
+
+  &:focus {
+    border-color: $input-border;
+    @include box-shadow(none);
+  }
+}
+
+
+.btn-clear {
+    background: $btn-clear-bg;
+    border-color: $btn-clear-border;
+    color: $btn-clear-color;
+    &:focus {
+        outline: 0!important;
+        border: 0;
+    }
+    &.active {
+        color: $brand-primary;
+        box-shadow: none;
+    }
+}
+

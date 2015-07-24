@@ -1,0 +1,99 @@
+
+@media screen and (max-width: 768px) {
+		.show-mobile {
+				display: block !important;
+		}
+}
+@media screen and (max-width: 768px) {
+		.hide-mobile {
+				display: none !important;
+		}
+}
+@media screen and (min-width: 768px) {
+		.hide-desktop {
+				display: none !important;
+		}
+}
+
+body {
+	padding-top: 62px;
+}
+@include respond(handhelds) {
+	body {
+		padding-top: 62px;
+	}
+}
+
+.blocks {
+	margin-bottom: 30px;
+}
+
+// Indicators =================================================================
+
+.alert {
+
+	a,
+	.alert-link {
+		color: #fff;
+	}
+}
+
+.tooltip {
+	@extend .sandstone;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+	border-radius: 10px;
+	background-color: $gray-light;
+	@include box-shadow(none);
+
+	&-bar {
+		@include box-shadow(none);
+	}
+}
+
+// Containers =================================================================
+
+.blocks {
+		@include respond(handhelds) {
+				margin: 24px 0;
+		}
+}
+
+.list-group {
+	&-item {
+		padding: 16px 24px;
+	}
+}
+
+.well {
+	@include box-shadow(none);
+}
+
+.panel {
+	@include box-shadow(none);
+
+	.panel-heading,
+	.panel-title {
+		@extend .sandstone;
+		color: #fff;
+	}
+
+	.panel-footer {
+		@extend .sandstone;
+	}
+
+	&-default {
+		.panel-heading,
+		.panel-title,
+		.panel-footer {
+			color: $gray;
+		}
+	}
+}
+
+*[ui-sref] {
+	cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-ng-app="clow">
+<head>
+    <title>clowFramework</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
+    <link rel="stylesheet" type="text/css" href="build/css/master.min.css">
+
+
+</head>
+<body>
+
+    <!-- include header -->
+    <ng-include src="'/templates/includes/header.html'"></ng-include>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" data-ng-controller="TestCtrl">
+                <div ng-repeat="test in tests">
+                    {{test.id}}<br>
+                    {{test.title}}
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- include footer -->
+    <ng-include src="'/templates/includes/footer.html'"></ng-include>
+
+
+<!-- LIVE RELOAD SCRIPT -->
+<script src="http://localhost:35729/livereload.js"></script>
+
+<!-- BASE SCRIPTS -->
+<script src="libs/jquery-1.11.3.min.js"></script>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular/lodash.min.js"></script>
+<script src="libs/angular/restangular.min.js"></script>
+<script src="libs/bootstrap/javascripts/bootstrap.min.js"></script>
+
+<script src="build/js/master.min.js"></script>
+
+</body>
+
+</html>
